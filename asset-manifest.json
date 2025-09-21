@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/My-Project-PropertyBazar-/static/css/main.40dc4a83.css",
+    "main.js": "/My-Project-PropertyBazar-/static/js/main.15a7aa20.js",
+    "static/js/453.eb636960.chunk.js": "/My-Project-PropertyBazar-/static/js/453.eb636960.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/My-Project-PropertyBazar-/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/My-Project-PropertyBazar-/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "index.html": "/My-Project-PropertyBazar-/index.html",
+    "main.40dc4a83.css.map": "/My-Project-PropertyBazar-/static/css/main.40dc4a83.css.map",
+    "main.15a7aa20.js.map": "/My-Project-PropertyBazar-/static/js/main.15a7aa20.js.map",
+    "453.eb636960.chunk.js.map": "/My-Project-PropertyBazar-/static/js/453.eb636960.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40dc4a83.css",
+    "static/js/main.15a7aa20.js"
+  ]
+}
