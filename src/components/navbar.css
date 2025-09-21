@@ -1,0 +1,121 @@
+/* Navbar fixed top */
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 10px 20px;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar form.d-flex {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.navbar .form-control {
+  width: 100%;
+}
+
+.navbar .btn {
+  min-width: 100px;
+}
+
+.btn-warning {
+  background-color: #ffce32;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #e6b800;
+}
+
+/* CategoryBar styling */
+.category-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 999;
+}
+
+.category-btn {
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Page content padding */
+.page-content {
+  padding-top: 70px; /* navbar height */
+}
+
+.page-content.with-category {
+  padding-top: 120px; /* navbar + categoryBar height */
+}
+
+/* Modal overlay */
+.modal.fade.show {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar form.d-flex {
+    flex-direction: column;
+  }
+  .navbar .form-control {
+    margin-bottom: 10px;
+  }
+  .navbar .btn {
+    min-width: auto;
+    margin-bottom: 5px;
+  }
+  .category-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .category-btn {
+    margin-bottom: 5px;
+  }
+}
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  background-color: #0056b3;
+}

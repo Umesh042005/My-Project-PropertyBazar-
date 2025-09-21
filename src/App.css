@@ -1,0 +1,36 @@
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+ 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+/* src/App.css */
+.app-background {
+  /* background-image: url('Untitled design.png');  apna image path */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: RELAIVE;
+  background-color: darkgrey;
+  
+}/* Reset CSS - sab browser me same dikhane ke liye */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+  overflow-x: hidden; /* horizontal scroll band */
+}
+
+
+
