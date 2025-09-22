@@ -14,9 +14,9 @@ function PropertyList() {
   const keyword = queryParams.get("search");
 
   const [properties, setProperties] = useState([]);
-
+ const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
-    let url = "http://localhost:8080/api/properties";
+    let url = `${API_URL}/api/properties`;
 
     if (category) {
       url += `?category=${category}`;

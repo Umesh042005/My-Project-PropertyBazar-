@@ -19,10 +19,10 @@ export default function Property() {
   useEffect(() => {
     fetchProperties();
   }, []);
-
+const API_URL = process.env.REACT_APP_API_URL;
   const fetchProperties = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/properties");
+     const res = await axios.get(`${API_URL}/api/properties`);
       setProperties(res.data);
     } catch (error) {
       console.error("Error fetching properties:", error);
@@ -52,9 +52,9 @@ export default function Property() {
     formData.append("location", property.location);
     formData.append("type", property.type);
     if (image) formData.append("image", image);
-
+const API_URL = process.env.REACT_APP_API_URL;
     try {
-      await axios.post("http://localhost:8080/api/properties", formData, {
+   await axios.post(`${API_URL}/api/properties`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Property uploaded successfully!");

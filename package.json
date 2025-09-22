@@ -1,5 +1,5 @@
 {
-
+"homepage": "https://Umesh042005.github.io/My-Project-PropertyBazar-",
 
   "name": "property-frontend",
 
@@ -46,9 +46,9 @@
     "react-scripts": "5.0.1",
 
 
-    "web-vitals": "^2.1.4",
+    "web-vitals": "^2.1.4"
     
-    "proxy": "http://localhost:8080"
+  
 
 
 
@@ -67,7 +67,9 @@
     "test": "react-scripts test",
 
 
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
 
 
   },

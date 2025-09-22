@@ -37,18 +37,20 @@ function EditProperty() {
     Bangalore: ["Electronic City", "Whitefield", "MG Road"],
   };
 
-  // Fetch property data by id
-  useEffect(() => {
-    axios
-      .get(`http://localhost:8080/api/properties/${id}`)
-      .then((res) => {
-        setProperty(res.data);
-      })
-      .catch((err) => {
-        console.error("Error fetching property:", err);
-        alert("Error fetching property details!");
-      });
-  }, [id]);
+ const API_URL = process.env.REACT_APP_API_URL;
+
+useEffect(() => {
+  axios
+    .get(`${API_URL}/api/properties/${id}`)
+    .then((res) => {
+      setProperty(res.data);
+    })
+    .catch((err) => {
+      console.error("Error fetching property:", err);
+      alert("Error fetching property details!");
+    });
+}, [id]);
+
 
   const handleChange = (e) => {
     setProperty({

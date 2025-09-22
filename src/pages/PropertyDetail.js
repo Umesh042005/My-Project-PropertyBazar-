@@ -8,7 +8,7 @@ function PropertyDetail() {
   const navigate = useNavigate();
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
-
+ const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -17,8 +17,9 @@ function PropertyDetail() {
       return;
     }
 
+
     axios
-      .get(`http://localhost:8080/api/properties/${id}`, {
+     .get(`${API_URL}/api/properties/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -40,7 +41,7 @@ function PropertyDetail() {
     if (!window.confirm("Are you sure you want to delete this property?")) return;
 
     axios
-      .delete(`http://localhost:8080/api/properties/${id}`, {
+       .delete(`${API_URL}/api/properties/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {

@@ -21,9 +21,9 @@ export default function Login({ closeModal, setToken }) {
     const body = isLogin
       ? { username: email, password } // login
       : { username: email, email: email, password }; // signup
-
+const API_URL = process.env.REACT_APP_API_URL;
     try {
-      const res = await fetch(`http://localhost:8080${endpoint}`, {
+    const res = await fetch(`${API_URL}${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

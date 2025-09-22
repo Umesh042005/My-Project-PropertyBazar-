@@ -56,9 +56,9 @@ function AddProperty({ token, onAdd }) { // receive token from App.js
     const formData = new FormData();
     Object.keys(property).forEach((key) => formData.append(key, property[key]));
     if (image) formData.append("image", image);
-
+const API_URL = process.env.REACT_APP_API_URL;
     try {
-      const res = await fetch("http://localhost:8080/api/properties", {
+      const res = await fetch(`${API_URL}/api/properties`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` }, // use token here
         body: formData,
