@@ -77,9 +77,9 @@ useEffect(() => {
       formData.append("category", property.category);
       formData.append("contact", property.contact);
       if (image) formData.append("image", image);
-
+const API_URL = process.env.REACT_APP_API_URL;
       await axios.put(
-        `http://localhost:8080/api/properties/${id}`,
+        `${API_URL}/api/properties/${id}`,
         formData,
         {
           headers: {
